@@ -1,0 +1,15 @@
+@charset: "UTF-8";
+
+html > * > div.container.align-center > div > div > p {
+    color: #f9f295 !important;
+}
+
+html > * > div.container.align-center > div > div > p > strong {
+    color: #ffcc00 !important;
+}
+
+html > * > figure > div > figcaption > div > strong {
+    color: #22bb22 !important;
+}
+
+@import "./../theme/css/style.css" !important;
