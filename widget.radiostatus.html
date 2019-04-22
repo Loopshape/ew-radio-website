@@ -15,257 +15,66 @@
 		<link rel="stylesheet" type="text/css" href="css/new_design_1_2/animations.css">
 		<link rel="stylesheet" type="text/css" href="css/new_design_1_2/fonts/gotham/Gotham.css">
 
-		<style>
-			#player, #share-zone {
-				background-color: #1E7FCB;
-			}
-
-			#player #controls-zone .like-button-zone #like-button svg path, #player #controls-zone .like-button-zone #dislike-button svg path, .play-pause-button svg path {
-				fill: #1E7FCB;
-			}
-
-			#player #buttons-zone .section #popup-button-zone #btnPopup #zoom-icon path, #player #buttons-zone .section #bottom-zone #volume-zone #mute-button-zone #mute-button #volume-up-icon path, #player #buttons-zone .section #bottom-zone #volume-zone #mute-button-zone #mute-button #volume-off-icon path, #player #buttons-zone .section #bottom-zone .button-zone #btnDownload #download-icon path, #player #buttons-zone .section #bottom-zone .button-zone #share-button #share-icon path, #close-share.close-button svg path, #listeners-count svg {
-				fill: #FFFFFF;
-			}
-
-			.hd.on, #player #buttons-zone .section #radio-title-zone, #player #buttons-zone .section #titrage, #share-zone #share-buttons-title, #share-zone #share-code-title, #listeners-count {
-				color: #FFFFFF;
-			}
-
-			#player #controls-zone .like-button-zone #like-button, #player #controls-zone .like-button-zone #dislike-button, #player #controls-zone #play-pause-zone #btnPlay, #player #controls-zone #play-pause-zone #btnStop, #player #controls-zone #play-pause-zone #loading, #player #buttons-zone .section #bottom-zone #volume-zone #slider-zone #slider .ui-slider-range.ui-widget-header.ui-corner-all.ui-slider-range-min, #player #buttons-zone .section #bottom-zone #volume-zone #slider-zone:hover #slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all .ui-slider-handle.ui-state-default.ui-corner-all {
-				background-color: #FFFFFF;
-			}
-
-			#loading .loader {
-				border: 2px solid #FFFFFF;
-				border-top: 2px solid #1E7FCB;
-			}
-
-			.hd {
-				color: rgba(255,255,255,0.25);
-			}
-			html body span.titre {
-				color: #fc0 !important;
-				font-weight: 800 !important;
-				font-size: 1.5em !important;
-			}
-			html body span.artiste {
-				color: #2c2 !important;
-				font-weight: 800 !important;
-				font-size: 1.78em !important;
-			}
-		</style>
+		<style></style>
 		<script type="text/javascript">
 			var lang = 'en';
 		</script>
 	</head>
-
 	<body>
-		<div class="section">
-			<div id="titrage" style="display: inline-block;">
-				<span id="titre">Loleatta Holloway - Love Sensation (Dr Packer Rework)</span>
-				<span id="artiste">Loleatta Holloway</span>
-			</div>
-		</div>
 		<!--  Design horizontal du player -->
-
-		<div id="player" style="
-		display: none!important;
-		">
+		<div id="player">
 			<div id="cover-zone">
 				<div id="cover-zone">
 					<div id="pochetteHolder"></div>
-					<div id="pochette"><img src="https://d1taocs3kfk7z6.cloudfront.net/track/cover/8d1e2c17-deb5-4474-885d-a7c1d1c8122f">
-					</div>
+					<div id="pochette"></div>
 				</div>
 			</div>
 			<div id="controls-zone">
 				<div class="like-button-zone">
-					<div id="like-button" class="controls-button bigOnHover">
-						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.065px" height="124.065px" viewBox="0 0 124.065 124.065" style="enable-background:new 0 0 124.065 124.065;" xml:space="preserve">
-							<g>
-								<path d="M12.532,77.057c7.7,10.2,17.7,18.4,28.1,25.801c0,0,12.4,8.6,18.1,12.6c2.1,1.4,4.799,1.4,6.799,0c5.7-4,18-12.6,18-12.6
-								c10.4-7.4,20.2-15.5,28-25.801c6.601-8.8,11.5-19.2,12.4-30.2c1.6-20-11.3-39.2-32.7-39.2c-12.5,0-23.5,6.8-29.1,16.9
-								c-5.8-10.2-16.7-17-29.2-17c-21.3,0-34.4,19.2-32.8,39.2C1.032,57.757,5.832,68.257,12.532,77.057z"></path>
-							</g>
-						</svg>
+					<div id="like-button" class="controls-button bigOnHover voteDisabled">
+
 					</div>
 				</div>
 				<div id="play-pause-zone">
-					<div id="btnPlay" class="play-pause-button controls-button bigOnHover" style="display: inline-block;">
-						<svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8 5v14l11-7z"></path>
-						</svg>
+					<div id="btnPlay" class="play-pause-button controls-button bigOnHover">
+
 					</div>
-					<div id="loading" class="play-pause-button controls-button bigOnHover" style="display: none;">
+					<div id="loading" class="play-pause-button controls-button bigOnHover">
 						<div class="loader"></div>
 					</div>
-					<div id="btnStop" class="play-pause-button controls-button bigOnHover" style="display: none;">
-						<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-							<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
-						</svg>
+					<div id="btnStop" class="play-pause-button controls-button bigOnHover">
+
 					</div>
 				</div>
 				<div class="like-button-zone">
-					<div id="dislike-button" class="controls-button bigOnHover">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.26 116.08">
-							<title>dislike</title>
-							<g id="Calque_2" data-name="Calque 2">
-								<g id="Capa_1" data-name="Capa 1">
-									<path d="M.13,46.33c.9,11,5.7,21.5,12.4,30.3,7.7,10.2,17.7,18.4,28.1,25.8,0,0,12.4,8.6,18.1,12.6a6,6,0,0,0,6.8,0l18-12.6c4.24-3,8.36-6.16,12.3-9.5L7,20.56A39.28,39.28,0,0,0,.13,46.33Z"></path><path d="M107.88,81.1c1.25-1.45,2.48-2.93,3.65-4.47,6.6-8.8,11.5-19.2,12.4-30.2,1.6-20-11.3-39.2-32.7-39.2a33.22,33.22,0,0,0-29.1,16.9,33.51,33.51,0,0,0-29.2-17A31.86,31.86,0,0,0,20.2,9.7L8.28,0,2.91,6.59l116,94.43,5.37-6.59Z"></path>
-								</g>
-							</g>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<div id="buttons-zone">
-				<div class="section">
-					<div id="radio-title-zone">
-						<span id="radio-title" style="max-width: calc(100% - 30px);">Electronic Waves Radio</span>
-					</div>
-					<div id="popup-button-zone">
-						<div id="btnPopup" class="bigOnHover">
-							<svg id="zoom-icon" fill="#000000" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<defs>
-									<path d="M0 0h24v24H0z" id="a"></path>
-								</defs>
-								<clipPath id="b">
-									<use overflow="visible" xlink:href="#a"></use>
-								</clipPath>
-								<path clip-path="url(#b)" d="M15 3l2.3 2.3-2.89 2.87 1.42 1.42L18.7 6.7 21 9V3zM3 9l2.3-2.3 2.87 2.89 1.42-1.42L6.7 5.3 9 3H3zm6 12l-2.3-2.3 2.89-2.87-1.42-1.42L5.3 17.3 3 15v6zm12-6l-2.3 2.3-2.87-2.89-1.42 1.42 2.89 2.87L15 21h6z"></path>
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="section">
-					<div id="titrage" style="display: inline-block;">
-						<span id="titre">David Forbes pres. Hal Stucker - Stars (John Askew Rework) (320  kbps)</span>
-						<span id="artiste">Unknown</span>
-					</div>
-				</div>
-				<div class="section">
-					<div id="bottom-zone">
-						<div id="volume-zone">
-							<div id="volume" style="display: none;">
-								75
-							</div>
-							<div id="mute-button-zone">
-								<div id="mute-button" class="bigOnHover biggerFromSmaller">
-									<svg id="volume-up-icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
-									</svg>
+					<div id="dislike-button" class="controls-button bigOnHover voteDisabled">
 
-									<svg id="volume-off-icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"></path>
-									</svg>
-								</div>
-							</div>
-							<div id="slider-zone">
-								<div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
-									<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 75%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 75%;"></a>
-								</div>
-							</div>
-						</div>
-
-						<div class="button-zone">
-							<div id="share-button" class="bigOnHover biggerFromSmaller" title="Share this track">
-								<svg id="share-icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
-								</svg>
-							</div>
-						</div>
-
-						<div id="hd-zone">
-							<div id="hd-button" class="hd bigOnHover biggerFromSmaller on">
-								<span id="hd-icon">HD</span>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id="radioStream" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="about:blank"></audio>
-			</div>
+			<div id="radioStream"></div>
 			<div id="share-zone">
 				<div id="share-top">
-					<div id="share-buttons-title">
-						SHARE THIS TRACK
-					</div>
+
 				</div>
 				<div id="share-buttons-zone">
 					<a class="share-button bigOnHover scaleShadowOnHover" id="linkFacebook" title="Share this track" onclick="playerRadioPartageButton();return false;" target="_blank" href="#">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112.196 112.196" style="enable-background:new 0 0 112.196 112.196;" xml:space="preserve">
-						<g>
-							<circle style="fill:#3B5998;" cx="56.098" cy="56.098" r="56.098"></circle>
-							<path style="fill:#FFFFFF;" d="M70.201,58.294h-10.01v36.672H45.025V58.294h-7.213V45.406h7.213v-8.34
-							c0-5.964,2.833-15.303,15.301-15.303L71.56,21.81v12.51h-8.151c-1.337,0-3.217,0.668-3.217,3.513v7.585h11.334L70.201,58.294z"></path>
-						</g>
-					</svg>
 					<script>
 						function playerRadioPartageButton() {
 							window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.electronicwavesradio.com', 'playerRadioPartage', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=640,height=310');
 						}
 					</script> </a>
-					<a class="share-button bigOnHover scaleShadowOnHover" id="linkTwitter" title="Share on Twitter" target="_blank" href="https://twitter.com/home?status=I'm%20listening%20%22Loleatta%20Holloway%20-%20Loleatta%20Holloway%20-%20Love%20Sensation%20(Dr%20Packer%20Rework)%22%20on%20Electronic%20Waves%20Radio%2C%20https%253A%252F%252Fwww.electronicwavesradio.com&amp;url=https%3A%2F%2Fwww.electronicwavesradio.com">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112.197 112.197" style="enable-background:new 0 0 112.197 112.197;" xml:space="preserve">
-						<g>
-							<circle style="fill:#55ACEE;" cx="56.099" cy="56.098" r="56.098"></circle>
-							<g>
-								<path style="fill:#F1F2F2;" d="M90.461,40.316c-2.404,1.066-4.99,1.787-7.702,2.109c2.769-1.659,4.894-4.284,5.897-7.417
-								c-2.591,1.537-5.462,2.652-8.515,3.253c-2.446-2.605-5.931-4.233-9.79-4.233c-7.404,0-13.409,6.005-13.409,13.409
-								c0,1.051,0.119,2.074,0.349,3.056c-11.144-0.559-21.025-5.897-27.639-14.012c-1.154,1.98-1.816,4.285-1.816,6.742
-								c0,4.651,2.369,8.757,5.965,11.161c-2.197-0.069-4.266-0.672-6.073-1.679c-0.001,0.057-0.001,0.114-0.001,0.17
-								c0,6.497,4.624,11.916,10.757,13.147c-1.124,0.308-2.311,0.471-3.532,0.471c-0.866,0-1.705-0.083-2.523-0.239
-								c1.706,5.326,6.657,9.203,12.526,9.312c-4.59,3.597-10.371,5.74-16.655,5.74c-1.08,0-2.15-0.063-3.197-0.188
-								c5.931,3.806,12.981,6.025,20.553,6.025c24.664,0,38.152-20.432,38.152-38.153c0-0.581-0.013-1.16-0.039-1.734
-								C86.391,45.366,88.664,43.005,90.461,40.316L90.461,40.316z"></path>
-							</g>
-						</g>
-					</svg> </a>
-					<a class="share-button bigOnHover scaleShadowOnHover" id="linkGoogle" title="Share on Google Plus" target="_blank" href="javascript:void(0)">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112.196 112.196" style="enable-background:new 0 0 112.196 112.196;" xml:space="preserve">
-						<g>
-							<g>
-								<circle id="XMLID_30_" style="fill:#DC4E41;" cx="56.098" cy="56.097" r="56.098"></circle>
-							</g>
-							<g>
-								<path style="fill:#DC4E41;" d="M19.531,58.608c-0.199,9.652,6.449,18.863,15.594,21.867c8.614,2.894,19.205,0.729,24.937-6.648
-								c4.185-5.169,5.136-12.06,4.683-18.498c-7.377-0.066-14.754-0.044-22.12-0.033c-0.012,2.628,0,5.246,0.011,7.874
-								c4.417,0.122,8.835,0.066,13.252,0.155c-1.115,3.821-3.655,7.377-7.51,8.757c-7.443,3.28-16.94-1.005-19.282-8.813
-								c-2.827-7.477,1.801-16.5,9.442-18.675c4.738-1.667,9.619,0.21,13.673,2.673c2.054-1.922,3.976-3.976,5.864-6.052
-								c-4.606-3.854-10.525-6.217-16.61-5.698C29.526,35.659,19.078,46.681,19.531,58.608z"></path>
-								<path style="fill:#DC4E41;" d="M79.102,48.668c-0.022,2.198-0.045,4.407-0.056,6.604c-2.209,0.022-4.406,0.033-6.604,0.044
-								c0,2.198,0,4.384,0,6.582c2.198,0.011,4.407,0.022,6.604,0.045c0.022,2.198,0.022,4.395,0.044,6.604c2.187,0,4.385-0.011,6.582,0
-								c0.012-2.209,0.022-4.406,0.045-6.615c2.197-0.011,4.406-0.022,6.604-0.033c0-2.198,0-4.384,0-6.582
-								c-2.197-0.011-4.406-0.022-6.604-0.044c-0.012-2.198-0.033-4.407-0.045-6.604C83.475,48.668,81.288,48.668,79.102,48.668z"></path>
-								<g>
-									<path style="fill:#FFFFFF;" d="M19.531,58.608c-0.453-11.927,9.994-22.949,21.933-23.092c6.085-0.519,12.005,1.844,16.61,5.698
-									c-1.889,2.077-3.811,4.13-5.864,6.052c-4.054-2.463-8.935-4.34-13.673-2.673c-7.642,2.176-12.27,11.199-9.442,18.675
-									c2.342,7.808,11.839,12.093,19.282,8.813c3.854-1.38,6.395-4.936,7.51-8.757c-4.417-0.088-8.835-0.033-13.252-0.155
-									c-0.011-2.628-0.022-5.246-0.011-7.874c7.366-0.011,14.743-0.033,22.12,0.033c0.453,6.439-0.497,13.33-4.683,18.498
-									c-5.732,7.377-16.322,9.542-24.937,6.648C25.981,77.471,19.332,68.26,19.531,58.608z"></path>
-									<path style="fill:#FFFFFF;" d="M79.102,48.668c2.187,0,4.373,0,6.57,0c0.012,2.198,0.033,4.407,0.045,6.604
-									c2.197,0.022,4.406,0.033,6.604,0.044c0,2.198,0,4.384,0,6.582c-2.197,0.011-4.406,0.022-6.604,0.033
-									c-0.022,2.209-0.033,4.406-0.045,6.615c-2.197-0.011-4.396,0-6.582,0c-0.021-2.209-0.021-4.406-0.044-6.604
-									c-2.197-0.023-4.406-0.033-6.604-0.045c0-2.198,0-4.384,0-6.582c2.198-0.011,4.396-0.022,6.604-0.044
-									C79.057,53.075,79.079,50.866,79.102,48.668z"></path>
-								</g>
-							</g>
-						</g>
-					</svg> </a>
+					<a class="share-button bigOnHover scaleShadowOnHover" id="linkTwitter" title="Share on Twitter" target="_blank" href="javascript:void(0)"> </a>
+					<a class="share-button bigOnHover scaleShadowOnHover" id="linkGoogle" title="Share on Google Plus" target="_blank" href="javascript:void(0)"> </a>
 				</div>
-				<div id="share-code-title">
-					Code to embed
-				</div>
+
 				<div id="share-code-zone">
-					<input type="text" readonly="" value="<iframe src=&quot;https://www.radioking.com/widgets/player/player.php?id=199069&amp;f=h&amp;v=2&amp;l=470&amp;c=%231E7FCB&amp;c2=%23FFFFFF&amp;p=0&amp;s=1&amp;i=0&amp;li=1&amp;a=1&quot; height=&quot;145&quot; frameborder=&quot;0&quot; style=&quot;min-width:470px;border-radius: 5px;width:470px;&quot;></iframe>">
+					<iframe src="https://www.radioking.com/widgets/player/player.php?id=199069&amp;f=h&amp;v=2&amp;l=470&amp;c=%231E7FCB&amp;c2=%23FFFFFF&amp;p=0&amp;s=1&amp;i=0&amp;li=1&amp;a=1" height="145" frameborder="0" style="min-width:470px;border-radius: 5px;width:470px;"></iframe>
 				</div>
 			</div>
 			<div class="close-button" id="close-share">
-				<svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-				</svg>
+
 			</div>
 		</div>
 
@@ -273,11 +82,11 @@
 			$typeplayer = "h";
 			$urlflux = "https:\/\/www.radioking.com\/play\/electronic-waves-radio";
 			$idradio = "199069";
-			$plc = "0";
+			$plc = 0;
 			$radiourl = "https%3A%2F%2Fwww.electronicwavesradio.com";
 
 			var radioName = "Electronic Waves Radio";
-			var AutoPlay = "1";
+			var AutoPlay = "0";
 			var radioSite = "https:\/\/www.electronicwavesradio.com";
 			var apiURL = "https://www.radioking.com/widgets/api/v1";
 			var managerApiURL = "https://www.radioking.com/api";
@@ -309,261 +118,6 @@
 		<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 		<script type="text/javascript" src="js/new_design_1_2/player.js"></script>
 
-		<span id="pablo-extension-hover-button" style="display: none;position: absolute;z-index: 8675309;width: 66px;height: 25px;background-image: url(chrome-extension://gfpibnlcombjoeejlongmihndgkpnjjo/data/shared/img/pablo-hover-icon@1x.png);background-size: 66px 25px;opacity: 0.9;cursor: pointer;"></span><span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@1x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer; top: 115.5px; left: 40.5px;"></span>
-	</body>
-
-	<!--
-
-	<body>
-	<div class="section">
-	<div id="titrage" style="display: inline-block;">
-	<span id="titre">SONGTITLE [RELEASEDATE]</span>
-	<span id="artiste">ARTIST / INTERPRET</span>
-	</div>
-	</div>
-	<!--  Design horizontal du player -->
-
-	<div id="player" style="
-	display: none!important;
-	">
-		<div id="cover-zone">
-			<div id="cover-zone">
-				<div id="pochetteHolder"></div>
-				<div id="pochette"><img src="https://d1taocs3kfk7z6.cloudfront.net/track/cover/8d1e2c17-deb5-4474-885d-a7c1d1c8122f">
-				</div>
-			</div>
-		</div>
-		<div id="controls-zone">
-			<div class="like-button-zone">
-				<div id="like-button" class="controls-button bigOnHover">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.065px" height="124.065px" viewBox="0 0 124.065 124.065" style="enable-background:new 0 0 124.065 124.065;" xml:space="preserve">
-						<g>
-							<path d="M12.532,77.057c7.7,10.2,17.7,18.4,28.1,25.801c0,0,12.4,8.6,18.1,12.6c2.1,1.4,4.799,1.4,6.799,0c5.7-4,18-12.6,18-12.6
-							c10.4-7.4,20.2-15.5,28-25.801c6.601-8.8,11.5-19.2,12.4-30.2c1.6-20-11.3-39.2-32.7-39.2c-12.5,0-23.5,6.8-29.1,16.9
-							c-5.8-10.2-16.7-17-29.2-17c-21.3,0-34.4,19.2-32.8,39.2C1.032,57.757,5.832,68.257,12.532,77.057z"></path>
-						</g>
-					</svg>
-				</div>
-			</div>
-			<div id="play-pause-zone">
-				<div id="btnPlay" class="play-pause-button controls-button bigOnHover" style="display: inline-block;">
-					<svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M8 5v14l11-7z"></path>
-					</svg>
-				</div>
-				<div id="loading" class="play-pause-button controls-button bigOnHover" style="display: none;">
-					<div class="loader"></div>
-				</div>
-				<div id="btnStop" class="play-pause-button controls-button bigOnHover" style="display: none;">
-					<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
-					</svg>
-				</div>
-			</div>
-			<div class="like-button-zone">
-				<div id="dislike-button" class="controls-button bigOnHover">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.26 116.08">
-						<title>dislike</title>
-						<g id="Calque_2" data-name="Calque 2">
-							<g id="Capa_1" data-name="Capa 1">
-								<path d="M.13,46.33c.9,11,5.7,21.5,12.4,30.3,7.7,10.2,17.7,18.4,28.1,25.8,0,0,12.4,8.6,18.1,12.6a6,6,0,0,0,6.8,0l18-12.6c4.24-3,8.36-6.16,12.3-9.5L7,20.56A39.28,39.28,0,0,0,.13,46.33Z"></path><path d="M107.88,81.1c1.25-1.45,2.48-2.93,3.65-4.47,6.6-8.8,11.5-19.2,12.4-30.2,1.6-20-11.3-39.2-32.7-39.2a33.22,33.22,0,0,0-29.1,16.9,33.51,33.51,0,0,0-29.2-17A31.86,31.86,0,0,0,20.2,9.7L8.28,0,2.91,6.59l116,94.43,5.37-6.59Z"></path>
-							</g>
-						</g>
-					</svg>
-				</div>
-			</div>
-		</div>
-		<div id="buttons-zone">
-			<div class="section">
-				<div id="radio-title-zone">
-					<span id="radio-title" style="max-width: calc(100% - 30px);">Electronic Waves Radio</span>
-				</div>
-				<div id="popup-button-zone">
-					<div id="btnPopup" class="bigOnHover">
-						<svg id="zoom-icon" fill="#000000" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<defs>
-								<path d="M0 0h24v24H0z" id="a"></path>
-							</defs>
-							<clipPath id="b">
-								<use overflow="visible" xlink:href="#a"></use>
-							</clipPath>
-							<path clip-path="url(#b)" d="M15 3l2.3 2.3-2.89 2.87 1.42 1.42L18.7 6.7 21 9V3zM3 9l2.3-2.3 2.87 2.89 1.42-1.42L6.7 5.3 9 3H3zm6 12l-2.3-2.3 2.89-2.87-1.42-1.42L5.3 17.3 3 15v6zm12-6l-2.3 2.3-2.87-2.89-1.42 1.42 2.89 2.87L15 21h6z"></path>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<div class="section">
-				<div id="titrage" style="display: inline-block;">
-					<span id="titre">David Forbes pres. Hal Stucker - Stars (John Askew Rework) (320  kbps)</span>
-					<span id="artiste">Unknown</span>
-				</div>
-			</div>
-			<div class="section">
-				<div id="bottom-zone">
-					<div id="volume-zone">
-						<div id="volume" style="display: none;">
-							75
-						</div>
-						<div id="mute-button-zone">
-							<div id="mute-button" class="bigOnHover biggerFromSmaller">
-								<svg id="volume-up-icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
-								</svg>
-
-								<svg id="volume-off-icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"></path>
-								</svg>
-							</div>
-						</div>
-						<div id="slider-zone">
-							<div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
-								<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 75%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 75%;"></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="button-zone">
-						<div id="share-button" class="bigOnHover biggerFromSmaller" title="Share this track">
-							<svg id="share-icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path>
-							</svg>
-						</div>
-					</div>
-
-					<div id="hd-zone">
-						<div id="hd-button" class="hd bigOnHover biggerFromSmaller on">
-							<span id="hd-icon">HD</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="radioStream" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="about:blank"></audio>
-		</div>
-		<div id="share-zone">
-			<div id="share-top">
-				<div id="share-buttons-title">
-					SHARE THIS TRACK
-				</div>
-			</div>
-			<div id="share-buttons-zone">
-				<a class="share-button bigOnHover scaleShadowOnHover" id="linkFacebook" title="Share this track" onclick="playerRadioPartageButton();return false;" target="_blank" href="#">
-				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112.196 112.196" style="enable-background:new 0 0 112.196 112.196;" xml:space="preserve">
-					<g>
-						<circle style="fill:#3B5998;" cx="56.098" cy="56.098" r="56.098"></circle>
-						<path style="fill:#FFFFFF;" d="M70.201,58.294h-10.01v36.672H45.025V58.294h-7.213V45.406h7.213v-8.34
-						c0-5.964,2.833-15.303,15.301-15.303L71.56,21.81v12.51h-8.151c-1.337,0-3.217,0.668-3.217,3.513v7.585h11.334L70.201,58.294z"></path>
-					</g>
-				</svg>
-				<script>
-					function playerRadioPartageButton() {
-						window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.electronicwavesradio.com', 'playerRadioPartage', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=640,height=310');
-					}
-				</script> </a>
-				<a class="share-button bigOnHover scaleShadowOnHover" id="linkTwitter" title="Share on Twitter" target="_blank" href="https://twitter.com/home?status=I'm%20listening%20%22Unknown%20-%20Altern%208%20-%20E-Vapor-8%20%5B1992%5D%22%20on%20Electronic%20Waves%20Radio%2C%20https%253A%252F%252Fwww.electronicwavesradio.com&amp;url=https%3A%2F%2Fwww.electronicwavesradio.com">
-				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112.197 112.197" style="enable-background:new 0 0 112.197 112.197;" xml:space="preserve">
-					<g>
-						<circle style="fill:#55ACEE;" cx="56.099" cy="56.098" r="56.098"></circle>
-						<g>
-							<path style="fill:#F1F2F2;" d="M90.461,40.316c-2.404,1.066-4.99,1.787-7.702,2.109c2.769-1.659,4.894-4.284,5.897-7.417
-							c-2.591,1.537-5.462,2.652-8.515,3.253c-2.446-2.605-5.931-4.233-9.79-4.233c-7.404,0-13.409,6.005-13.409,13.409
-							c0,1.051,0.119,2.074,0.349,3.056c-11.144-0.559-21.025-5.897-27.639-14.012c-1.154,1.98-1.816,4.285-1.816,6.742
-							c0,4.651,2.369,8.757,5.965,11.161c-2.197-0.069-4.266-0.672-6.073-1.679c-0.001,0.057-0.001,0.114-0.001,0.17
-							c0,6.497,4.624,11.916,10.757,13.147c-1.124,0.308-2.311,0.471-3.532,0.471c-0.866,0-1.705-0.083-2.523-0.239
-							c1.706,5.326,6.657,9.203,12.526,9.312c-4.59,3.597-10.371,5.74-16.655,5.74c-1.08,0-2.15-0.063-3.197-0.188
-							c5.931,3.806,12.981,6.025,20.553,6.025c24.664,0,38.152-20.432,38.152-38.153c0-0.581-0.013-1.16-0.039-1.734
-							C86.391,45.366,88.664,43.005,90.461,40.316L90.461,40.316z"></path>
-						</g>
-					</g>
-				</svg> </a>
-				<a class="share-button bigOnHover scaleShadowOnHover" id="linkGoogle" title="Share on Google Plus" target="_blank" href="javascript:void(0)">
-				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 112.196 112.196" style="enable-background:new 0 0 112.196 112.196;" xml:space="preserve">
-					<g>
-						<g>
-							<circle id="XMLID_30_" style="fill:#DC4E41;" cx="56.098" cy="56.097" r="56.098"></circle>
-						</g>
-						<g>
-							<path style="fill:#DC4E41;" d="M19.531,58.608c-0.199,9.652,6.449,18.863,15.594,21.867c8.614,2.894,19.205,0.729,24.937-6.648
-							c4.185-5.169,5.136-12.06,4.683-18.498c-7.377-0.066-14.754-0.044-22.12-0.033c-0.012,2.628,0,5.246,0.011,7.874
-							c4.417,0.122,8.835,0.066,13.252,0.155c-1.115,3.821-3.655,7.377-7.51,8.757c-7.443,3.28-16.94-1.005-19.282-8.813
-							c-2.827-7.477,1.801-16.5,9.442-18.675c4.738-1.667,9.619,0.21,13.673,2.673c2.054-1.922,3.976-3.976,5.864-6.052
-							c-4.606-3.854-10.525-6.217-16.61-5.698C29.526,35.659,19.078,46.681,19.531,58.608z"></path>
-							<path style="fill:#DC4E41;" d="M79.102,48.668c-0.022,2.198-0.045,4.407-0.056,6.604c-2.209,0.022-4.406,0.033-6.604,0.044
-							c0,2.198,0,4.384,0,6.582c2.198,0.011,4.407,0.022,6.604,0.045c0.022,2.198,0.022,4.395,0.044,6.604c2.187,0,4.385-0.011,6.582,0
-							c0.012-2.209,0.022-4.406,0.045-6.615c2.197-0.011,4.406-0.022,6.604-0.033c0-2.198,0-4.384,0-6.582
-							c-2.197-0.011-4.406-0.022-6.604-0.044c-0.012-2.198-0.033-4.407-0.045-6.604C83.475,48.668,81.288,48.668,79.102,48.668z"></path>
-							<g>
-								<path style="fill:#FFFFFF;" d="M19.531,58.608c-0.453-11.927,9.994-22.949,21.933-23.092c6.085-0.519,12.005,1.844,16.61,5.698
-								c-1.889,2.077-3.811,4.13-5.864,6.052c-4.054-2.463-8.935-4.34-13.673-2.673c-7.642,2.176-12.27,11.199-9.442,18.675
-								c2.342,7.808,11.839,12.093,19.282,8.813c3.854-1.38,6.395-4.936,7.51-8.757c-4.417-0.088-8.835-0.033-13.252-0.155
-								c-0.011-2.628-0.022-5.246-0.011-7.874c7.366-0.011,14.743-0.033,22.12,0.033c0.453,6.439-0.497,13.33-4.683,18.498
-								c-5.732,7.377-16.322,9.542-24.937,6.648C25.981,77.471,19.332,68.26,19.531,58.608z"></path>
-								<path style="fill:#FFFFFF;" d="M79.102,48.668c2.187,0,4.373,0,6.57,0c0.012,2.198,0.033,4.407,0.045,6.604
-								c2.197,0.022,4.406,0.033,6.604,0.044c0,2.198,0,4.384,0,6.582c-2.197,0.011-4.406,0.022-6.604,0.033
-								c-0.022,2.209-0.033,4.406-0.045,6.615c-2.197-0.011-4.396,0-6.582,0c-0.021-2.209-0.021-4.406-0.044-6.604
-								c-2.197-0.023-4.406-0.033-6.604-0.045c0-2.198,0-4.384,0-6.582c2.198-0.011,4.396-0.022,6.604-0.044
-								C79.057,53.075,79.079,50.866,79.102,48.668z"></path>
-							</g>
-						</g>
-					</g>
-				</svg> </a>
-			</div>
-			<div id="share-code-title">
-				Code to embed
-			</div>
-			<div id="share-code-zone">
-				<input type="text" readonly="" value="<iframe src=&quot;https://www.radioking.com/widgets/player/player.php?id=199069&amp;f=h&amp;v=2&amp;l=470&amp;c=%231E7FCB&amp;c2=%23FFFFFF&amp;p=0&amp;s=1&amp;i=0&amp;li=1&amp;a=1&quot; height=&quot;145&quot; frameborder=&quot;0&quot; style=&quot;min-width:470px;border-radius: 5px;width:470px;&quot;></iframe>">
-			</div>
-		</div>
-		<div class="close-button" id="close-share">
-			<svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-			</svg>
-		</div>
-	</div>
-
-	<script type="text/javascript">
-		$typeplayer = "h";
-		$urlflux = "https:\/\/www.radioking.com\/play\/electronic-waves-radio";
-		$idradio = "199069";
-		$plc = "0";
-		$radiourl = "https%3A%2F%2Fwww.electronicwavesradio.com";
-
-		var radioName = "Electronic Waves Radio";
-		var AutoPlay = "1";
-		var radioSite = "https:\/\/www.electronicwavesradio.com";
-		var apiURL = "https://www.radioking.com/widgets/api/v1";
-		var managerApiURL = "https://www.radioking.com/api";
-		var coverimg = "https:\/\/d1taocs3kfk7z6.cloudfront.net\/track\/cover\/8d1e2c17-deb5-4474-885d-a7c1d1c8122f";
-		var streams = [{
-			"idstream" : 241624,
-			"status" : "active",
-			"type" : 1
-		}];
-		$couleur = "#1E7FCB";
-		$iditunes = null;
-
-		$partage = "1";
-		$popup = "1";
-		$itunes = "0";
-		$pochette = "0";
-		$equalizer = "1";
-
-		$host = "www.radioking.com";
-		$port = "80";
-
-		$taillePlayerW = 470;
-		$taillePlayerH = 145;
-	</script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script type="text/javascript" src="js/system.min.js"></script>
-	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="js/new_design_1_2/player.js"></script>
-
-	<span id="pablo-extension-hover-button" style="display: none;position: absolute;z-index: 8675309;width: 66px;height: 25px;background-image: url(chrome-extension://gfpibnlcombjoeejlongmihndgkpnjjo/data/shared/img/pablo-hover-icon@1x.png);background-size: 66px 25px;opacity: 0.9;cursor: pointer;"></span><span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@1x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer; top: 115.5px; left: 40.5px;"></span>
-
+		<span id="pablo-extension-hover-button" style="display: none;position: absolute;z-index: 8675309;width: 66px;height: 25px;background-image: url(chrome-extension://gfpibnlcombjoeejlongmihndgkpnjjo/data/shared/img/pablo-hover-icon@1x.png);background-size: 66px 25px;opacity: 0.9;cursor: pointer;"></span><span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@1x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer;"></span>
 	</body>
 </html>
