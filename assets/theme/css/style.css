@@ -730,3 +730,29 @@ html body #menu1-s > nav > button {
 	top: 15px !important;
 	right: 15px !important;
 }
+
+html body * > p.mbr-text.mbr-fonts-style {
+	font-size: 1.88em !important;
+}
+
+html body *.char_red {
+	color: #a12 !important;
+}
+
+html body *.char_blue {
+	color: #259 !important;
+}
+
+html body *.char_yellow {
+	color: #fc0 !important;
+}
+
+html body *.char_green {
+	color: #3c3 !important;
+}
+
+html body *.goclear > * {
+	clear: both;
+	padding-top: 0.25;
+	font-size: 2em !important;
+}
