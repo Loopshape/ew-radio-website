@@ -5,6 +5,11 @@
  * Copyright 2017 Mobirise
  */
 
+html body {
+	display: block!important;
+	background-color: #012!important;
+}
+
 section {
 	background-color: #eeeeee;
 	}
@@ -755,4 +760,34 @@ html body *.goclear > * {
 	clear: both;
 	padding-top: 0.25;
 	font-size: 2em !important;
+}
+
+html body *#event_scheduler,
+html body *#row_setup {
+	position: relative;
+	display: inline-block;
+	width: 100%!important;
+	height: 480px!important;
+}
+
+html body *#row_setup {}
+
+<!-- headline -->
+html body *#menu1-o > nav > div.menu-logo > div > span.navbar-caption-wrap > a {
+	
+}
+
+html body *.row_teaser {
+	background: none!important;
+}
+
+html body *.row_image {
+	position: relative!important;
+	display: inline-block!important;
+	width: 100%!important;
+	width: auto!important;
+	min-width: 100%!important;
+	height: auto!important;
+	min-height: auto!important;
+	z-index: -1;
 }
