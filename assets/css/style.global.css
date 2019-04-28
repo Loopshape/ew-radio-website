@@ -12,4 +12,6 @@ html > * > figure > div > figcaption > div > strong {
     color: #22bb22 !important;
 }
 
+@import "./../theme/css/style.v2" !important;
+@import "./../theme/css/style.v1" !important;
 @import "./../theme/css/style.css" !important;
