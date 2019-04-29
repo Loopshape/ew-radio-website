@@ -2,7 +2,12 @@
 
 /*
  * Mobirise v4 theme (https://mobirise.com/)
+ * 
  * Copyright 2017 Mobirise
+ * 
+ * Extended CSS3 script coded by LOOPSHAPE <webscreen.designer>
+ * //awebgoblog.wordpress.com
+ * 
  */
 
 html {
@@ -852,11 +857,21 @@ html body *.gradient_green {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cdc12', endColorstr='#6dbb0d',GradientType=0 ) !important;
 }
 
+html body *.floatbox {
+	position: absolute !important;
+	width: 80% !important;
+	height: 600px !important;
+	top: 160px !important;
+	left: 50% !important;
+	margin-left: -33% !important;
+	z-index: 1 !important;
+}
+
 html body *.third_floatbox {
 	position: absolute !important;
-	width: 66% !important;
-	height: auto !important;
-	top: 160px;
+	width: 80% !important;
+	height: 600px !important;
+	top: 160px !important;
 	left: 50% !important;
 	margin-left: -33% !important;
 	z-index: 1 !important;
@@ -1115,4 +1130,13 @@ html body > section {
 html body *.mbr-figure > * {
 	-webkit-box-shadow: 0 0 20px 20px #259 !important;
 	box-shadow: 0 0 20px 20px #259 !important;
+}
+
+html body *#footer1-o > div > * > div > h5 > p > a {
+	color: #22cc22!important;
+}
+
+html body *.field_screen {
+	height: auto!important;
+	min-height: 800px !important;
 }
